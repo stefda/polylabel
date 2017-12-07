@@ -8,6 +8,6 @@ Read all the detail including its JS and C++ implementation in the [original Map
 
 Given polygon coordinates in GeoJSON-like format and precision (1.0 by default), Polylabel returns the pole of inaccessibility coordinate in [x, y] format.
 
-```
+```python
 p = polylabel(polygon, 1.0)
 ```
