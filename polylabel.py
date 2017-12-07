@@ -5,7 +5,8 @@ SQRT2 = math.sqrt(2)
 
 
 def polylabel(polygon, precision=1.0, debug=False):
-    precision = precision or 1.0
+    """ Computes the pole of inaccessibility coordinate in [x, y] format.
+    """
 
     # find the bounding box of the outer ring
     minX = maxX = polygon[0][0][0]
@@ -21,7 +22,7 @@ def polylabel(polygon, precision=1.0, debug=False):
     cellSize = min(width, height)
     h = cellSize / 2.0
 
-    # a priority queue of cells in order of their "potential" (max distance to polygon)
+    # priority queue of cells in order of their "potential" (max distance to polygon)
     cellQueue = Queue(compareMax)
 
     if cellSize == 0: return [minX, minY];
